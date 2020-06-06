@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581CB7F9248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */; };
+		58FAB916248BF87200B1E46E /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAB915248BF87200B1E46E /* RepositoryError.swift */; };
 		58FB1DE0248BE19E000806FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DDF248BE19E000806FB /* AppDelegate.swift */; };
 		58FB1DE2248BE19E000806FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DE1248BE19E000806FB /* SceneDelegate.swift */; };
 		58FB1DE9248BE1A2000806FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FB1DE8248BE1A2000806FB /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 		58FB1E0B248BE637000806FB /* SwiftRepositoriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E05248BE637000806FB /* SwiftRepositoriesModels.swift */; };
 		58FB1E0C248BE637000806FB /* SwiftRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E06248BE637000806FB /* SwiftRepositoriesViewController.swift */; };
 		58FB1E0D248BE637000806FB /* SwiftRepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E07248BE637000806FB /* SwiftRepositoriesInteractor.swift */; };
+		58FB1E10248BF648000806FB /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E0F248BF648000806FB /* Repositories.swift */; };
+		58FB1E13248BF721000806FB /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E12248BF721000806FB /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesViewScreen.swift; sourceTree = "<group>"; };
+		58FAB915248BF87200B1E46E /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		58FB1DDC248BE19E000806FB /* SwiftGitHubRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGitHubRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FB1DDF248BE19E000806FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58FB1DE1248BE19E000806FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,8 @@
 		58FB1E05248BE637000806FB /* SwiftRepositoriesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesModels.swift; sourceTree = "<group>"; };
 		58FB1E06248BE637000806FB /* SwiftRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesViewController.swift; sourceTree = "<group>"; };
 		58FB1E07248BE637000806FB /* SwiftRepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesInteractor.swift; sourceTree = "<group>"; };
+		58FB1E0F248BF648000806FB /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		58FB1E12248BF721000806FB /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		581CB7FA248C017400EFB1C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58FAB917248BF87800B1E46E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				58FAB915248BF87200B1E46E /* RepositoryError.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		58FB1DD3248BE19E000806FB = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +114,9 @@
 				58FB1DEA248BE1A2000806FB /* LaunchScreen.storyboard */,
 				58FB1DED248BE1A2000806FB /* Info.plist */,
 				58FB1E0E248BE63D000806FB /* Scene */,
+				58FB1E11248BF64E000806FB /* Model */,
+				58FB1E14248BF724000806FB /* Constants */,
+				58FAB917248BF87800B1E46E /* Commons */,
 			);
 			path = SwiftGitHubRepositories;
 			sourceTree = "<group>";
@@ -120,8 +147,25 @@
 				58FB1E05248BE637000806FB /* SwiftRepositoriesModels.swift */,
 				58FB1E06248BE637000806FB /* SwiftRepositoriesViewController.swift */,
 				58FB1E07248BE637000806FB /* SwiftRepositoriesInteractor.swift */,
+				581CB7FA248C017400EFB1C6 /* View */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		58FB1E11248BF64E000806FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58FB1E0F248BF648000806FB /* Repositories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58FB1E14248BF724000806FB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				58FB1E12248BF721000806FB /* Endpoints.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +272,13 @@
 				58FB1DE0248BE19E000806FB /* AppDelegate.swift in Sources */,
 				58FB1E0C248BE637000806FB /* SwiftRepositoriesViewController.swift in Sources */,
 				58FB1E0D248BE637000806FB /* SwiftRepositoriesInteractor.swift in Sources */,
+				58FAB916248BF87200B1E46E /* RepositoryError.swift in Sources */,
 				58FB1E0B248BE637000806FB /* SwiftRepositoriesModels.swift in Sources */,
+				58FB1E10248BF648000806FB /* Repositories.swift in Sources */,
 				58FB1DE2248BE19E000806FB /* SceneDelegate.swift in Sources */,
+				58FB1E13248BF721000806FB /* Endpoints.swift in Sources */,
 				58FB1E09248BE637000806FB /* SwiftRepositoriesWorker.swift in Sources */,
+				581CB7F9248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

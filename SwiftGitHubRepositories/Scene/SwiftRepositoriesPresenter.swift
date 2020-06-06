@@ -9,7 +9,9 @@
 import UIKit
 
 protocol SwiftRepositoriesPresentationLogic {
-    func presentRepositories(response: SwiftRepositories.Repositories.Response)
+    func presentRepositories(response: SwiftRepositories.LoadRepositories.Response)
+    func presentError()
+    func toggleLoading(_ bool: Bool)
 }
 
 class SwiftRepositoriesPresenter: SwiftRepositoriesPresentationLogic {
@@ -18,8 +20,16 @@ class SwiftRepositoriesPresenter: SwiftRepositoriesPresentationLogic {
     
     // MARK: Present Repositories
     
-    func presentRepositories(response: SwiftRepositories.Repositories.Response) {
-        let viewModel = SwiftRepositories.Repositories.ViewModel()
+    func presentRepositories(response: SwiftRepositories.LoadRepositories.Response) {
+        let viewModel = SwiftRepositories.LoadRepositories.ViewModel(repositories: response.repositories)
         viewController?.displayRepositories(viewModel: viewModel)
+    }
+    
+    func presentError() {
+        viewController?.displayError()
+    }
+    
+    func toggleLoading(_ bool: Bool) {
+        viewController?.toggleLoading(bool)
     }
 }

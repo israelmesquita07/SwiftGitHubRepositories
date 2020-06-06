@@ -11,18 +11,18 @@ import UIKit
 enum SwiftRepositories {
     // MARK: Use cases
     
-    enum Repositories {
+    enum LoadRepositories {
         
         struct Request {
-            
+            let page: Int
         }
         
         struct Response {
-            
+            let repositories: Repositories
         }
         
         struct ViewModel {
-            
+            let repositories: Repositories
         }
     }
 }

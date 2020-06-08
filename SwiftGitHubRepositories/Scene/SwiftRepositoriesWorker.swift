@@ -20,15 +20,18 @@ final class SwiftRepositoriesWorker: ListRepositoryServicing {
             completion(.failure(.invalidUrl))
             return
         }
-        print(url)
         let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard error == nil else {
-                completion(.failure(.internetFailure))
+                DispatchQueue.main.async {
+                    completion(.failure(.internetFailure))
+                }
                 return
             }
             do {
                 guard let data = data else {
-                    completion(.failure(.internetFailure))
+                    DispatchQueue.main.async {
+                        completion(.failure(.internetFailure))
+                    }
                     return
                 }
                 let decoder = JSONDecoder()

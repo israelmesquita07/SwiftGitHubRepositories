@@ -10,13 +10,14 @@ import UIKit
 
 protocol SwiftRepositoriesDisplayLogic: class {
     func displayRepositories(viewModel: SwiftRepositories.LoadRepositories.ViewModel)
-    func displayError()
+    func displayError(title: String, message: String)
     func toggleLoading(_ bool: Bool)
 }
 
 final class SwiftRepositoriesViewController: UIViewController {
     
     private var interactor: SwiftRepositoriesBusinessLogic?
+    private lazy var viewScreen = SwiftRepositoriesViewScreen(delegate: self)
     
     // MARK: Setup
     
@@ -45,27 +46,64 @@ final class SwiftRepositoriesViewController: UIViewController {
         title = "Swift Repositories"
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
+        setupViewScreen()
+    }
+    
+    private func setupViewScreen() {
+        viewScreen.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(viewScreen)
+        NSLayoutConstraint.activate([
+            viewScreen.topAnchor.constraint(equalTo: view.topAnchor),
+            viewScreen.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            viewScreen.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            viewScreen.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     // MARK: Load Repositories
     
     private func loadRepositories() {
-        let request = SwiftRepositories.LoadRepositories.Request(page: 1)
-        interactor?.loadRepositories(request: request)
+        interactor?.loadRepositories()
+    }
+    
+    private func showMessage(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
 //MARK: - SwiftRepositoriesDisplayLogic
 extension SwiftRepositoriesViewController: SwiftRepositoriesDisplayLogic {
     func displayRepositories(viewModel: SwiftRepositories.LoadRepositories.ViewModel) {
-        print(viewModel.repositories)
+        viewScreen.items = viewModel.items
     }
     
-    func displayError() {
-        
+    func displayError(title: String, message: String) {
+        showMessage(title: title, message: message)
     }
     
     func toggleLoading(_ bool: Bool) {
-        
+        if bool {
+            viewScreen.startLoading()
+            return
+        }
+        viewScreen.stopLoading()
+    }
+}
+
+
+//MARK: - ViewScreenDelegating
+extension SwiftRepositoriesViewController: ViewScreenDelegating {
+    func notifyTableViewEnds() {
+        interactor?.loadRepositories()
+    }
+    
+    func refreshItems() {
+        interactor?.refreshItems()
+    }
+    
+    func didSelectRowAt(repositoryName: String) {
+        showMessage(title: "Você selecionou:", message: repositoryName)
     }
 }

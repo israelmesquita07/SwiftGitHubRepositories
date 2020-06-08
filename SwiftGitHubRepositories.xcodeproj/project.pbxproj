@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		581CB7F9248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */; };
+		581CB7FC248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CB7FB248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift */; };
+		58D6F95B248E9FE900BADE82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6F95A248E9FE900BADE82 /* Constants.swift */; };
 		58FAB916248BF87200B1E46E /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAB915248BF87200B1E46E /* RepositoryError.swift */; };
 		58FB1DE0248BE19E000806FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DDF248BE19E000806FB /* AppDelegate.swift */; };
 		58FB1DE2248BE19E000806FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DE1248BE19E000806FB /* SceneDelegate.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesViewScreen.swift; sourceTree = "<group>"; };
+		581CB7FB248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesTableViewCell.swift; sourceTree = "<group>"; };
+		58D6F95A248E9FE900BADE82 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		58FAB915248BF87200B1E46E /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		58FB1DDC248BE19E000806FB /* SwiftGitHubRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGitHubRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FB1DDF248BE19E000806FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,15 +79,26 @@
 		581CB7FA248C017400EFB1C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				581CB7FD248C69F500EFB1C6 /* Cell */,
 				581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+		581CB7FD248C69F500EFB1C6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				581CB7FB248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		58FAB917248BF87800B1E46E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				58FB1E12248BF721000806FB /* Endpoints.swift */,
 				58FAB915248BF87200B1E46E /* RepositoryError.swift */,
+				58D6F95A248E9FE900BADE82 /* Constants.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -115,7 +130,6 @@
 				58FB1DED248BE1A2000806FB /* Info.plist */,
 				58FB1E0E248BE63D000806FB /* Scene */,
 				58FB1E11248BF64E000806FB /* Model */,
-				58FB1E14248BF724000806FB /* Constants */,
 				58FAB917248BF87800B1E46E /* Commons */,
 			);
 			path = SwiftGitHubRepositories;
@@ -158,14 +172,6 @@
 				58FB1E0F248BF648000806FB /* Repositories.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		58FB1E14248BF724000806FB /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				58FB1E12248BF721000806FB /* Endpoints.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +281,8 @@
 				58FAB916248BF87200B1E46E /* RepositoryError.swift in Sources */,
 				58FB1E0B248BE637000806FB /* SwiftRepositoriesModels.swift in Sources */,
 				58FB1E10248BF648000806FB /* Repositories.swift in Sources */,
+				58D6F95B248E9FE900BADE82 /* Constants.swift in Sources */,
+				581CB7FC248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift in Sources */,
 				58FB1DE2248BE19E000806FB /* SceneDelegate.swift in Sources */,
 				58FB1E13248BF721000806FB /* Endpoints.swift in Sources */,
 				58FB1E09248BE637000806FB /* SwiftRepositoriesWorker.swift in Sources */,

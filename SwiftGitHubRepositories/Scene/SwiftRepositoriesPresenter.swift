@@ -10,23 +10,23 @@ import UIKit
 
 protocol SwiftRepositoriesPresentationLogic {
     func presentRepositories(response: SwiftRepositories.LoadRepositories.Response)
-    func presentError()
+    func presentError(title: String, message: String)
     func toggleLoading(_ bool: Bool)
 }
 
-class SwiftRepositoriesPresenter: SwiftRepositoriesPresentationLogic {
+final class SwiftRepositoriesPresenter: SwiftRepositoriesPresentationLogic {
     
     weak var viewController: SwiftRepositoriesDisplayLogic?
     
     // MARK: Present Repositories
     
     func presentRepositories(response: SwiftRepositories.LoadRepositories.Response) {
-        let viewModel = SwiftRepositories.LoadRepositories.ViewModel(repositories: response.repositories)
+        let viewModel = SwiftRepositories.LoadRepositories.ViewModel(items: response.items)
         viewController?.displayRepositories(viewModel: viewModel)
     }
     
-    func presentError() {
-        viewController?.displayError()
+    func presentError(title: String, message: String) {
+        viewController?.displayError(title: title, message: message)
     }
     
     func toggleLoading(_ bool: Bool) {

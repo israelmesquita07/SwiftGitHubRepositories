@@ -9,27 +9,48 @@
 import UIKit
 
 protocol SwiftRepositoriesBusinessLogic {
-    func loadRepositories(request: SwiftRepositories.LoadRepositories.Request)
+    func loadRepositories()
+    func refreshItems()
 }
 
-class SwiftRepositoriesInteractor: SwiftRepositoriesBusinessLogic {
+final class SwiftRepositoriesInteractor: SwiftRepositoriesBusinessLogic {
     
     var presenter: SwiftRepositoriesPresentationLogic?
+    var page = 1, totalPages = Constants.totalPages
     private var worker: ListRepositoryServicing?
+    private var items: [Item] = []
     
     // MARK: Load Repositories
     
-    func loadRepositories(request: SwiftRepositories.LoadRepositories.Request) {
+    func loadRepositories() {
+        presenter?.toggleLoading(true)
+        page = page > totalPages ? 1 : page
+        let request = SwiftRepositories.LoadRepositories.Request(page: page)
         worker = SwiftRepositoriesWorker()
-        worker?.fetchRepositories(request: request, completion: { result in
+        worker?.fetchRepositories(request: request, completion: { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let repositories):
-                let response = SwiftRepositories.LoadRepositories.Response(repositories: repositories)
+                self.page += self.page
+                self.items += repositories.items ?? []
+                let response = SwiftRepositories.LoadRepositories.Response(items: self.items)
                 self.presenter?.presentRepositories(response: response)
+                self.presenter?.toggleLoading(false)
             case .failure(let error):
-                print(error)
-                self.presenter?.presentError()
+                switch error {
+                case .internetFailure:
+                    self.presenter?.presentError(title: "Ops!", message: "Parece que sua conexão está instável")
+                default:
+                    self.presenter?.presentError(title: "Ops!", message: "Ocorreu algum erro 😢")
+                }
+                self.presenter?.toggleLoading(false)
             }
         })
+    }
+    
+    func refreshItems() {
+        page = 1
+        items = []
+        loadRepositories()
     }
 }

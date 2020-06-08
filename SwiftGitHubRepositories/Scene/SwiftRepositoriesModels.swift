@@ -18,11 +18,11 @@ enum SwiftRepositories {
         }
         
         struct Response {
-            let repositories: Repositories
+            let items: [Item]
         }
         
         struct ViewModel {
-            let repositories: Repositories
+            let items: [Item]
         }
     }
 }

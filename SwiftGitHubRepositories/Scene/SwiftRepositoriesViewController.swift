@@ -92,7 +92,6 @@ extension SwiftRepositoriesViewController: SwiftRepositoriesDisplayLogic {
     }
 }
 
-
 //MARK: - ViewScreenDelegating
 extension SwiftRepositoriesViewController: ViewScreenDelegating {
     func notifyTableViewEnds() {

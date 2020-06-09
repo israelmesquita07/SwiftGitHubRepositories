@@ -53,6 +53,8 @@ final class SwiftRepositoriesViewScreen: UIView {
         return tableView
     }()
     
+    // MARK: - Init
+    
     init(delegate: ViewScreenDelegating) {
         self.delegate = delegate
         super.init(frame: .zero)
@@ -82,7 +84,7 @@ final class SwiftRepositoriesViewScreen: UIView {
         ])
     }
     
-    // MARK: Animation Loading
+    // MARK: - Animation Loading
     
     func startLoading() {
         activityIndicator.startAnimating()

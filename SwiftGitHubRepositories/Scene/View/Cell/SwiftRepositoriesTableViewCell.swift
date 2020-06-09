@@ -12,6 +12,8 @@ final class SwiftRepositoriesTableViewCell: UITableViewCell {
     
     private var task: URLSessionTask?
     
+    // MARK: - View Code
+    
     private lazy var repositoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -33,7 +35,9 @@ final class SwiftRepositoriesTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
+    // MARK: - Init
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()

@@ -17,8 +17,8 @@ final class SwiftRepositoriesInteractor: SwiftRepositoriesBusinessLogic {
     
     var presenter: SwiftRepositoriesPresentationLogic?
     var page = 1, totalPages = Constants.totalPages
-    private var worker: ListRepositoryServicing?
-    private var items: [Item] = []
+    var worker: ListRepositoryServicing?
+    var items: [Item] = []
     
     // MARK: Load Repositories
     
@@ -26,13 +26,13 @@ final class SwiftRepositoriesInteractor: SwiftRepositoriesBusinessLogic {
         presenter?.toggleLoading(true)
         page = page > totalPages ? 1 : page
         let request = SwiftRepositories.LoadRepositories.Request(page: page)
-        worker = SwiftRepositoriesWorker()
+        worker = worker ?? SwiftRepositoriesWorker()
         worker?.fetchRepositories(request: request, completion: { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let repositories):
                 self.page += self.page
-                self.items += repositories.items ?? []
+                self.items += repositories.items
                 let response = SwiftRepositories.LoadRepositories.Response(items: self.items)
                 self.presenter?.presentRepositories(response: response)
                 self.presenter?.toggleLoading(false)

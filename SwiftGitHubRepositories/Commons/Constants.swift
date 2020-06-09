@@ -9,5 +9,5 @@
 import Foundation
 
 struct Constants {
-    static let totalPages = 34
+    static let totalPages = 34 //It is a definition of the github API
 }

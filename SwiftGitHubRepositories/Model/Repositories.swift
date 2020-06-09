@@ -9,7 +9,7 @@
 import Foundation
 
 struct Repositories: Decodable {
-    let items: [Item]?
+    let items: [Item]
 }
 
 struct Item: Decodable {

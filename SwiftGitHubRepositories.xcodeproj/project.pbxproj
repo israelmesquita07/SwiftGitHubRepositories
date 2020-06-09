@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58023D51248EC52A008DB046 /* SwiftGitHubRepositoriesWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58023D50248EC52A008DB046 /* SwiftGitHubRepositoriesWorkerTests.swift */; };
 		581CB7F9248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */; };
 		581CB7FC248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CB7FB248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift */; };
+		584C9802248F3A52007C51D8 /* SwiftGitHubRepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C9801248F3A52007C51D8 /* SwiftGitHubRepositoriesPresenterTests.swift */; };
+		584C9804248F3A9D007C51D8 /* SwiftGitHubRepositoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C9803248F3A9D007C51D8 /* SwiftGitHubRepositoriesViewControllerTests.swift */; };
+		584C9806248F3B13007C51D8 /* ViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C9805248F3B13007C51D8 /* ViewControllerSpy.swift */; };
+		584C9808248F3B29007C51D8 /* InteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C9807248F3B29007C51D8 /* InteractorSpy.swift */; };
+		584C980A248F3B33007C51D8 /* PresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C9809248F3B33007C51D8 /* PresenterSpy.swift */; };
 		58D6F95B248E9FE900BADE82 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6F95A248E9FE900BADE82 /* Constants.swift */; };
+		58D6F95D248EBB5D00BADE82 /* SwiftGitHubRepositoriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6F95C248EBB5D00BADE82 /* SwiftGitHubRepositoriesInteractorTests.swift */; };
+		58D6F95F248EBBCB00BADE82 /* WorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6F95E248EBBCB00BADE82 /* WorkerSpy.swift */; };
 		58FAB916248BF87200B1E46E /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAB915248BF87200B1E46E /* RepositoryError.swift */; };
 		58FB1DE0248BE19E000806FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DDF248BE19E000806FB /* AppDelegate.swift */; };
 		58FB1DE2248BE19E000806FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DE1248BE19E000806FB /* SceneDelegate.swift */; };
 		58FB1DE9248BE1A2000806FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FB1DE8248BE1A2000806FB /* Assets.xcassets */; };
 		58FB1DEC248BE1A2000806FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58FB1DEA248BE1A2000806FB /* LaunchScreen.storyboard */; };
-		58FB1DF7248BE1A2000806FB /* SwiftGitHubRepositoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1DF6248BE1A2000806FB /* SwiftGitHubRepositoriesTests.swift */; };
 		58FB1E08248BE637000806FB /* SwiftRepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E02248BE637000806FB /* SwiftRepositoriesPresenter.swift */; };
 		58FB1E09248BE637000806FB /* SwiftRepositoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E03248BE637000806FB /* SwiftRepositoriesWorker.swift */; };
 		58FB1E0B248BE637000806FB /* SwiftRepositoriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB1E05248BE637000806FB /* SwiftRepositoriesModels.swift */; };
@@ -36,9 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58023D50248EC52A008DB046 /* SwiftGitHubRepositoriesWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGitHubRepositoriesWorkerTests.swift; sourceTree = "<group>"; };
 		581CB7F8248C016F00EFB1C6 /* SwiftRepositoriesViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesViewScreen.swift; sourceTree = "<group>"; };
 		581CB7FB248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesTableViewCell.swift; sourceTree = "<group>"; };
+		584C9801248F3A52007C51D8 /* SwiftGitHubRepositoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGitHubRepositoriesPresenterTests.swift; sourceTree = "<group>"; };
+		584C9803248F3A9D007C51D8 /* SwiftGitHubRepositoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGitHubRepositoriesViewControllerTests.swift; sourceTree = "<group>"; };
+		584C9805248F3B13007C51D8 /* ViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpy.swift; sourceTree = "<group>"; };
+		584C9807248F3B29007C51D8 /* InteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorSpy.swift; sourceTree = "<group>"; };
+		584C9809248F3B33007C51D8 /* PresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterSpy.swift; sourceTree = "<group>"; };
 		58D6F95A248E9FE900BADE82 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		58D6F95C248EBB5D00BADE82 /* SwiftGitHubRepositoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGitHubRepositoriesInteractorTests.swift; sourceTree = "<group>"; };
+		58D6F95E248EBBCB00BADE82 /* WorkerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerSpy.swift; sourceTree = "<group>"; };
 		58FAB915248BF87200B1E46E /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		58FB1DDC248BE19E000806FB /* SwiftGitHubRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGitHubRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FB1DDF248BE19E000806FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +62,6 @@
 		58FB1DEB248BE1A2000806FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58FB1DED248BE1A2000806FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FB1DF2248BE1A2000806FB /* SwiftGitHubRepositoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGitHubRepositoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		58FB1DF6248BE1A2000806FB /* SwiftGitHubRepositoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGitHubRepositoriesTests.swift; sourceTree = "<group>"; };
 		58FB1DF8248BE1A2000806FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FB1E02248BE637000806FB /* SwiftRepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesPresenter.swift; sourceTree = "<group>"; };
 		58FB1E03248BE637000806FB /* SwiftRepositoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesWorker.swift; sourceTree = "<group>"; };
@@ -91,6 +105,17 @@
 				581CB7FB248C69EF00EFB1C6 /* SwiftRepositoriesTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		58D6F960248EBC7300BADE82 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				58D6F95E248EBBCB00BADE82 /* WorkerSpy.swift */,
+				584C9805248F3B13007C51D8 /* ViewControllerSpy.swift */,
+				584C9807248F3B29007C51D8 /* InteractorSpy.swift */,
+				584C9809248F3B33007C51D8 /* PresenterSpy.swift */,
+			);
+			path = Spies;
 			sourceTree = "<group>";
 		};
 		58FAB917248BF87800B1E46E /* Commons */ = {
@@ -138,8 +163,12 @@
 		58FB1DF5248BE1A2000806FB /* SwiftGitHubRepositoriesTests */ = {
 			isa = PBXGroup;
 			children = (
-				58FB1DF6248BE1A2000806FB /* SwiftGitHubRepositoriesTests.swift */,
 				58FB1DF8248BE1A2000806FB /* Info.plist */,
+				58D6F95C248EBB5D00BADE82 /* SwiftGitHubRepositoriesInteractorTests.swift */,
+				584C9801248F3A52007C51D8 /* SwiftGitHubRepositoriesPresenterTests.swift */,
+				584C9803248F3A9D007C51D8 /* SwiftGitHubRepositoriesViewControllerTests.swift */,
+				58023D50248EC52A008DB046 /* SwiftGitHubRepositoriesWorkerTests.swift */,
+				58D6F960248EBC7300BADE82 /* Spies */,
 			);
 			path = SwiftGitHubRepositoriesTests;
 			sourceTree = "<group>";
@@ -294,7 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58FB1DF7248BE1A2000806FB /* SwiftGitHubRepositoriesTests.swift in Sources */,
+				58023D51248EC52A008DB046 /* SwiftGitHubRepositoriesWorkerTests.swift in Sources */,
+				584C980A248F3B33007C51D8 /* PresenterSpy.swift in Sources */,
+				584C9802248F3A52007C51D8 /* SwiftGitHubRepositoriesPresenterTests.swift in Sources */,
+				584C9808248F3B29007C51D8 /* InteractorSpy.swift in Sources */,
+				584C9804248F3A9D007C51D8 /* SwiftGitHubRepositoriesViewControllerTests.swift in Sources */,
+				58D6F95F248EBBCB00BADE82 /* WorkerSpy.swift in Sources */,
+				58D6F95D248EBB5D00BADE82 /* SwiftGitHubRepositoriesInteractorTests.swift in Sources */,
+				584C9806248F3B13007C51D8 /* ViewControllerSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

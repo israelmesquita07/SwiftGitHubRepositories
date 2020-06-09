@@ -16,8 +16,8 @@ protocol SwiftRepositoriesDisplayLogic: class {
 
 final class SwiftRepositoriesViewController: UIViewController {
     
-    private var interactor: SwiftRepositoriesBusinessLogic?
-    private lazy var viewScreen = SwiftRepositoriesViewScreen(delegate: self)
+    var interactor: SwiftRepositoriesBusinessLogic?
+    lazy var viewScreen = SwiftRepositoriesViewScreen(delegate: self)
     
     // MARK: Setup
     
@@ -62,7 +62,7 @@ final class SwiftRepositoriesViewController: UIViewController {
     
     // MARK: Load Repositories
     
-    private func loadRepositories() {
+    func loadRepositories() {
         interactor?.loadRepositories()
     }
     

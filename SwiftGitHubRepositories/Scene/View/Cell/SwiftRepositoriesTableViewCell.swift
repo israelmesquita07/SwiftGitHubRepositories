@@ -49,9 +49,9 @@ final class SwiftRepositoriesTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
-        addSubview(repositoryLabel)
-        addSubview(ownerWithStarsLabel)
-        addSubview(repositoryImageView)
+        contentView.addSubview(repositoryLabel)
+        contentView.addSubview(ownerWithStarsLabel)
+        contentView.addSubview(repositoryImageView)
         setupConstraints()
     }
     

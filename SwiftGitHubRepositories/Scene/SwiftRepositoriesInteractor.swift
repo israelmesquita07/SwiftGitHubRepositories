@@ -31,7 +31,7 @@ final class SwiftRepositoriesInteractor: SwiftRepositoriesBusinessLogic {
             guard let self = self else { return }
             switch result {
             case .success(let repositories):
-                self.page += self.page
+                self.page += 1
                 self.items += repositories.items
                 let response = SwiftRepositories.LoadRepositories.Response(items: self.items)
                 self.presenter?.presentRepositories(response: response)

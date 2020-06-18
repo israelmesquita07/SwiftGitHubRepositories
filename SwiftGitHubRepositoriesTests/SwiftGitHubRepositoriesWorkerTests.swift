@@ -14,11 +14,13 @@ class SwiftGitHubRepositoriesWorkerTests: XCTestCase {
     var sut: SwiftRepositoriesWorker!
     
     override func setUp() {
+        super.setUp()
         sut = SwiftRepositoriesWorker()
     }
     
     override func tearDown() {
         sut = nil
+        super.tearDown()
     }
     
     func testFetchRepositoriesSuccess() {
